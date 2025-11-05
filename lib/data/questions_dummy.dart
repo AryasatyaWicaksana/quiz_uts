@@ -46,9 +46,9 @@ final List<Question> questionsDummy = [
     options: [
       'HTML',
       'CSS',
-      'Python',
+      'Java',
       'SQL',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
   ),
 ];

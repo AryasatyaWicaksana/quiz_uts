@@ -17,7 +17,7 @@ class QuizScreen extends StatelessWidget {
         title: Text(
           'Soal ${quizProvider.currentIndex + 1} dari ${quizProvider.totalQuestions}',
         ),
-        automaticallyImplyLeading: false, // ❌ hilangkan tombol back default
+        automaticallyImplyLeading: false, // hilangkan tombol back default
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -53,7 +53,7 @@ class QuizScreen extends StatelessWidget {
                     );
                   }
                       : quizProvider.nextQuestion)
-                      : null, // ❌ nonaktif jika belum pilih jawaban
+                      : null, // nonaktif jika belum pilih jawaban
                   icon: const Icon(Icons.arrow_forward),
                   label: Text(
                       quizProvider.isLastQuestion ? 'Selesai' : 'Berikutnya'),
