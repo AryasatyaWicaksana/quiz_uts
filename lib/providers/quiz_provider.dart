@@ -19,34 +19,40 @@ class QuizProvider extends ChangeNotifier {
   Question get currentQuestion => _questions[_currentIndex];
   bool get isLastQuestion => _currentIndex == _questions.length - 1;
 
+  // Cek apakah sudah memilih jawaban
+  bool get canProceed => _selectedAnswerIndex != null;
+
   // Setter
   void setUserName(String name) {
     _userName = name;
     notifyListeners();
   }
 
-  // Saat user memilih jawaban
   void selectAnswer(int index) {
     _selectedAnswerIndex = index;
-
-    // Jika jawaban benar → tambah skor
     if (index == _questions[_currentIndex].correctIndex) {
       _score++;
     }
-
     notifyListeners();
   }
 
-  // Pindah ke soal berikutnya
   void nextQuestion() {
     if (_currentIndex < _questions.length - 1) {
       _currentIndex++;
-      _selectedAnswerIndex = null; // reset pilihan
+      _selectedAnswerIndex = null;
       notifyListeners();
     }
   }
 
-  // Reset seluruh quiz (saat user main ulang)
+  //Fungsi baru untuk kembali ke soal sebelumnya
+  void previousQuestion() {
+    if (_currentIndex > 0) {
+      _currentIndex--;
+      _selectedAnswerIndex = null; // reset pilihan di soal sebelumnya
+      notifyListeners();
+    }
+  }
+
   void resetQuiz() {
     _userName = '';
     _currentIndex = 0;

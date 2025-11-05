@@ -19,6 +19,14 @@ class HomeScreen extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              // 👇 Tambahkan logo di sini
+              Image.asset(
+                'assets/images/Logo.png',
+                height: 250,
+                fit: BoxFit.contain,
+              ),
+              const SizedBox(height: 5),
+
               const Text(
                 'Selamat Datang di Quiz UTS!',
                 style: TextStyle(
@@ -27,7 +35,9 @@ class HomeScreen extends StatelessWidget {
                 ),
                 textAlign: TextAlign.center,
               ),
+
               const SizedBox(height: 20),
+
               TextField(
                 controller: nameController,
                 decoration: const InputDecoration(
@@ -35,7 +45,9 @@ class HomeScreen extends StatelessWidget {
                   border: OutlineInputBorder(),
                 ),
               ),
+
               const SizedBox(height: 20),
+
               ElevatedButton(
                 onPressed: () {
                   if (nameController.text.isNotEmpty) {
