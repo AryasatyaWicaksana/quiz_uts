@@ -39,4 +39,4 @@ Fitur utama aplikasi:
 ## Link Yang dibutuhkan
 - **Figma (Mockup / Prototype):** [Klik di sini](https://www.figma.com/design/lZUiJtLkBpPQmtUM1CUjzl/UTS-PM-Lab-6-Quiz-_Aryasatya-Wicaksana_231401114?node-id=0-1&t=fXfv2tuQ1lRH0udj-1)  
 - **Repository GitHub:** [Klik di sini](https://github.com/AryasatyaWicaksana/quiz_uts/tree/master)  
-- **Video:** [Klik di sini](link_dokumen_anda_di_sini)
+- **Video:** [Klik di sini](https://youtu.be/DbVOsjCt9xU)
